@@ -92,14 +92,14 @@ WHERE sale_date IS NULL
 ### 3. Data Analysis & Business Queries  
 
 ```sql
-1.** Retrieve all sales made on '2022-11-05'**:
+1. Retrieve all sales made on '2022-11-05':
 SELECT *
 FROM retail_sales
 WHERE sale_date = '2022-11-05';
 ```
 
 
--- 2. Clothing category sales with quantity >= 4 in Nov-2022
+2. Clothing category sales with quantity >= 4 in Nov-2022:
 ```sql
 SELECT *
 FROM retail_sales
@@ -109,7 +109,7 @@ WHERE category = 'Clothing'
 ```
 
 
--- 3. Total sales for each category
+ 3. Total sales for each category:
 ```sql
 SELECT category, 
        SUM(total_sale) AS net_sale, 
@@ -119,7 +119,7 @@ GROUP BY category;
 ```
 
 
--- 4. Average age of customers who purchased from 'Beauty'
+4. Average age of customers who purchased from 'Beauty':
 ```sql
 SELECT ROUND(AVG(age), 2) AS avg_age
 FROM retail_sales
@@ -127,7 +127,7 @@ WHERE category = 'Beauty';
 ```
 
 
--- 5. Transactions with total_sale > 1000
+5. Transactions with total_sale > 1000:
 ```sql
 SELECT *
 FROM retail_sales
@@ -135,7 +135,7 @@ WHERE total_sale > 1000;
 ```
 
 
--- 6. Total number of transactions by gender in each category
+ 6. Total number of transactions by gender in each category:
 ```sql
 SELECT category, gender, COUNT(*) AS total_trans
 FROM retail_sales
@@ -144,7 +144,7 @@ ORDER BY category;
 ```
 
 
--- 7. Best-selling month in each year (based on avg sale)
+7. Best-selling month in each year (based on avg sale):
 ```sql
 SELECT year, month, avg_sale
 FROM (
@@ -160,7 +160,7 @@ WHERE rank = 1;
 ```
 
 
--- 8. Top 5 customers based on highest total sales
+ 8. Top 5 customers based on highest total sales:
 ```sql
 SELECT customer_id, SUM(total_sale) AS total_sales
 FROM retail_sales
@@ -170,7 +170,7 @@ LIMIT 5;
 ```
 
 
--- 9. Number of unique customers in each category
+9. Number of unique customers in each category:
 ```sql
 SELECT category, COUNT(DISTINCT customer_id) AS cnt_unique_cs
 FROM retail_sales
@@ -178,7 +178,7 @@ GROUP BY category;
 ```
 
 
--- 10. Orders by shift (Morning, Afternoon, Evening)
+10. Orders by shift (Morning, Afternoon, Evening):
 ```sql
 WITH hourly_sale AS (
     SELECT *,
