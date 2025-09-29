@@ -1,6 +1,6 @@
 # 🛒 Retail Sales Analysis  
 
-**Level:** Beginner  
+ 
 **Database:** `p1_retail_db`  
 
 This project demonstrates SQL skills and techniques typically used by data analysts to explore, clean, and analyze retail sales data. It is designed for beginners looking to build a solid foundation in SQL while working on a practical retail sales dataset.  
