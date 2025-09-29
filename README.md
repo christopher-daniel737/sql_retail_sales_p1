@@ -194,7 +194,7 @@ FROM hourly_sale
 GROUP BY shift;
 ```
 
-##Findings
+**Findings**
 
 Customer Demographics: Sales are spread across all age groups with varied product preferences.
 
@@ -204,7 +204,7 @@ Sales Trends: Seasonal and monthly sales variations reveal peak months.
 
 Customer Insights: Identified top-spending customers and popular categories.
 
-📑## Reports
+**📑 Reports**
 
 Sales Summary: Total sales, demographics, and category performance.
 
@@ -212,7 +212,7 @@ Trend Analysis: Monthly and shift-based sales patterns.
 
 Customer Insights: Top customers and unique buyers per category.
 
-✅ ##Conclusion
+**✅ Conclusion**
 
 This project is a beginner-friendly SQL case study for data analysts.
 It covers database setup, cleaning, exploratory analysis, and business-driven SQL queries.
