@@ -24,7 +24,7 @@ This project demonstrates SQL skills and techniques typically used by data analy
 CREATE DATABASE p1_retail_db;
 ```
 
--- Create Table
+-- **Create Table**
 ```sql
 CREATE TABLE retail_sales
 (
@@ -49,19 +49,19 @@ SELECT COUNT(*)
 FROM retail_sales;
 ```
 
--- Unique Customers
+-- **Unique Customers**
 ```sql
 SELECT COUNT(DISTINCT customer_id) 
 FROM retail_sales;
 ```
 
--- Unique Product Categories
+-- **Unique Product Categories**
 ```sql
 SELECT DISTINCT category 
 FROM retail_sales;
 ```
 
--- Check for Null Values
+-- **Check for Null Values**
 ```sql
 SELECT * 
 FROM retail_sales
@@ -76,7 +76,7 @@ WHERE sale_date IS NULL
    OR cogs IS NULL;
 ```
 
--- Remove Records with Null Values
+-- **Remove Records with Null Values**
 ```sql
 DELETE FROM retail_sales
 WHERE sale_date IS NULL 
@@ -92,7 +92,7 @@ WHERE sale_date IS NULL
 ### 3. Data Analysis & Business Queries  
 
 ```sql
--- 1. Retrieve all sales made on '2022-11-05'
+1.** Retrieve all sales made on '2022-11-05'**:
 SELECT *
 FROM retail_sales
 WHERE sale_date = '2022-11-05';
